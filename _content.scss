@@ -1,0 +1,147 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding:60px 12% 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    box-shadow:1px 1px 10px $bgcolor ;
+
+    img{
+        display: block;
+        width: 85px;
+    }
+
+    &-items{
+        cursor: pointer;
+    }
+
+    &-items:hover{
+        color:$blue;
+    }
+}
+
+.carousel{
+    overflow: hidden;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.sub-carousel{
+    width: 1250px;
+    min-width: 0px;
+}
+
+.deal-day{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+
+    h3{
+        font-weight: 600;
+    }
+
+    a{
+        background-color: $blue;
+        color: white;
+        text-decoration: none;
+        font-size: 0.6rem;
+        font-weight: bold;
+        padding: 15px 20px;
+        border-radius: 3px;
+        box-shadow: 1px 1px 10px whitesmoke;
+    }
+}
+
+.wrapper-item{
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 15px;
+    // border: 1px solid black;
+    
+    a{  
+        position: relative;
+        padding: 10px;
+        box-sizing: border-box;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        height:288px ;
+        width:195px ;
+
+    }
+
+    img:hover{
+        transform: scale(1.02);
+    }
+}
+
+.carousel-text{
+    font-size: 0.8rem;
+    color:grey;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 200px; 
+    bottom: 50px;
+
+    &:hover{
+        color: $blue;
+    }
+}
+
+.slider{
+    display: -webkit-box;
+    transition: transform 0.2s;
+}
+
+.btn{
+    cursor: pointer;
+    height: 100px;
+    border-style: none;
+    position: absolute;
+    z-index: 1;
+    top:100px;
+    width: 40px;
+    &-r{
+        right: 0;
+        border-radius:5px 0 0 5px; 
+    }
+
+    &-l{
+        border-radius:0 5px 5px 0;
+    }
+}
+
+.translator{
+    transform: translateX(-450px);
+    &-back{
+        transform: translateX(0px);
+    }
+}
+
+.translator1{
+    transform: translateX(-300px);
+    &-back{
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+
+.side-image{
+    // border: 1px solid black;
+    display: block;
+    height: 350px;
+    padding: 5px;
+}

@@ -1,0 +1,133 @@
+.nav-bar{
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    background-color: $blue;
+    justify-content: space-between;
+    padding:0 12%;
+    align-items: center;
+}
+
+
+.nav{
+    display: flex;
+
+    &-brand{
+        margin-right: 2%;
+    }
+    
+    &_logo{
+        width: 4rem;
+    }
+
+    &_search{
+        width:525px;
+        min-width: 100px;
+        height: 35px;
+        border-style: none;
+        outline: none;
+        border-radius:0.125rem 0 0 0.125rem;
+        font-size: 0.7rem;
+        padding-left: 0.7rem;
+    }
+
+    &_button{
+        cursor: pointer;
+        border-style:none;
+        background-color: white;
+        color: $blue;
+        border-radius:0 0.125rem 0.125rem 0;
+    }
+
+    &_options{
+        height: 50px;
+        font-size: 0.8rem;
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+
+    &_name{
+        min-width: 100px;
+        box-sizing: border-box;
+        padding: 20px 5px;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+
+.name-dropdown{
+    width: 200px;
+    margin-top: 17px;
+    display: none;
+    position: absolute;
+    left:-60px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(167, 165, 165);
+    border-radius:2px;
+    z-index: 1;
+    animation: fade 0.25s ease-in-out;
+    
+    a{
+        text-decoration: none;
+        display: block;
+        color: gray;
+        padding: 20px 10px;
+    }
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.nav_name:hover{
+    
+    .name-dropdown{
+        display: block;
+    }
+
+    .fas:not(:last-child){
+        transform: rotate(180deg);
+    }
+}
+
+.name-dropdown:hover{
+    display: block;
+}
+
+.dropdown-item:hover{
+    background-color: whitesmoke;
+}
+
+.nav-link{
+    text-decoration: none;
+    position: relative;
+    font-style:italic;
+    font-size:12px;
+    color: white;
+
+
+    &::after{
+        content:"";
+        position:absolute;
+        background-image: url("photos/plus-icon.png");
+        background-position: 30% 20%;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        width:20px;
+        height:20px;
+    }
+}
